@@ -4,7 +4,9 @@ permit_params :name, :capital
   index do
     selectable_column
     id_column
-    column :name
+    column "Name" do |province|
+      link_to province.name, '#'
+    end
     column :capital
     actions
   end
@@ -18,6 +20,11 @@ permit_params :name, :capital
     end
     f.actions
   end
+
+member_action :comments do
+@comments = resource.comments
+# This will render app/views/admin/posts/comments.html.erb
+end
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #

@@ -1,11 +1,11 @@
 ActiveAdmin.register City do
-  permit_params :name, :type
+  permit_params :name, :city_type
 
   index do
     selectable_column
     id_column
     column :name
-    column :type
+    column :city_type
     actions
   end
 
@@ -14,7 +14,7 @@ ActiveAdmin.register City do
   form do |f|
     f.inputs "City Details" do
       f.input :name
-      f.input :type
+      f.input :city_type
     end
     f.actions
   end

@@ -48,7 +48,7 @@ ActiveRecord::Schema.define(version: 20160826030841) do
 
   create_table "cities", force: :cascade do |t|
     t.string "name"
-    t.string "type"
+    t.string "city_type"
   end
 
   create_table "products", force: :cascade do |t|
