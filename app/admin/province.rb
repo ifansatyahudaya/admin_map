@@ -5,7 +5,7 @@ permit_params :name, :capital
     selectable_column
     id_column
     column "Name" do |province|
-      link_to province.name, admin_province_path(province.id)
+      link_to province.name, admin_province_cities_path(province.id)
     end
     column :capital
     actions
